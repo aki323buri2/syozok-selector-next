@@ -1,6 +1,10 @@
 $selected-color: dodgerblue !default;
 .syozok-options
 {
+	position: absolute;
+	z-index: 60;
+	width: 200px;
+	background: #fff;
 	border: 1px solid #ccc;
 	.syozok-option
 	{

@@ -1,0 +1,106 @@
+$dirty-color: navy !default;
+$invalid-color: tomato !default;
+$bukm-width: 74% !default;
+$bukm-height: 2.4em !default;
+.syozok-input
+{
+	.input
+	{
+		padding-right: $bukm-width;
+	}
+	.bukm
+	{
+		position: absolute;
+		right: 0;
+		width: $bukm-width;
+		line-height: $bukm-height;
+		height: $bukm-height;
+		cursor: pointer;
+		&:before
+		{
+			content: '- ', 
+		}
+	}
+
+	&.content:not(:last-child), 
+	.content:not(:last-child), 
+	.control:not(:last-child)
+	{
+		margin-bottom: 0;
+	}
+	.control.has-icons-left, 
+	.control.has-icons-right
+	{
+		.icon
+		{
+			cursor: pointer;
+			pointer-events: auto;
+		}
+	}
+
+	&.dirty
+	{
+		.input
+		{
+			border-color: $dirty-color;
+			background: rgba($dirty-color, .2);
+		}
+	}
+	&:not(.valid)
+	{
+		.input
+		{
+			border-color: $invalid-color;
+			background: rgba($invalid-color, .2);
+		}
+	}
+}
+
+.syozok-input
+{
+	.save-menu
+	{
+		position: absolute;
+		z-index: 50;
+		border: 1px solid $dirty-color;
+		background: rgba($dirty-color, .2);
+		padding: 3px;
+		margin-top: 3px;
+
+		.button 
+		{
+			border-color: $dirty-color;
+			color: $dirty-color;
+			&:not(:last-child)
+			{
+				margin-right: 3px;
+			}
+		}
+
+	}
+}
+.syozok-input
+{
+	.dropdown-enter
+	{
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	.dropdown-enter-active
+	{
+		opacity: 1;
+		transform: translateY(0);
+		transition: all .3s;
+	}
+	.dropdown-exit
+	{
+		opacity: 1;
+		transform: translateY(0); 
+	}
+	.dropdown-exit-active
+	{
+		opacity: 0;
+		transform: translateY(-50%);
+		transition: all .3s;
+	}
+}

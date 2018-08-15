@@ -1,2 +1,2 @@
-import Starter from './lib/Starter';
-export default Starter;
+import Syozok from './lib/Syozok';
+export default Syozok;

@@ -1,0 +1,32 @@
+$selected-color: dodgerblue !default;
+.syozok-options
+{
+	border: 1px solid #ccc;
+	.syozok-option
+	{
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 3px;
+		margin: 3px;
+
+		cursor: pointer;
+		&:hover
+		{
+			background: rgba(#ccc, .5);
+		}
+
+		.syozok
+		{
+			&:after
+			{
+				content: ' - ';
+			}
+		}
+
+		&.selected
+		{
+			background: $selected-color;
+			color: #fff;
+		}
+	}
+}
